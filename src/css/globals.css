@@ -1,0 +1,117 @@
+/* GLOBALS */
+
+  :root{
+    --lime-green: hsl(163, 72%, 41%);
+    --bright-red: hsl(356, 69%, 56%);
+    --facebook: #168ef4;
+    --twitter: hsl(203, 89%, 53%);
+    --instagram-1: hsl(37, 97%, 70%);
+    --instagram-2: hsl(329, 70%, 58%);
+    --youTube: hsl(348, 97%, 39%);
+    --gray: #5f616d;
+    --cardGray: #f0f3fa;
+    --lightGray:#f8f9fe;
+    --baseBack:white;
+    --baseColor: #1d2029;
+    --cardTitle:#6f717e;
+    --switchSpinner: white;
+    --switch: #5f616d;
+  }
+  body{
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+   
+    /* border: 90px solid red; */
+  }
+  main{
+    color: var(--baseColor);
+    background-color: var(--baseBack);
+    min-height: 100vh;
+  }
+  
+  h2{
+    color: var(--gray);
+  }
+  .wrapper{
+    padding: 0 30px;
+  }
+  .grid{
+    display: grid;
+    grid-row-gap:25px; 
+    padding: 0 30px;
+  }
+  @media screen and (min-width: 480px){
+    /* body{
+      /* border: 1px solid red; 
+    } */
+  .grid{
+      /* border: 1px solid purple; */
+      grid-template-columns: 1fr 1fr;
+      grid-column-gap:25px;
+    }
+    .wrapper{
+      max-width: 1440px;
+      margin: auto;
+    }
+  }
+  /* RESPONSIVE DIESIGN MOBILE */
+  @media screen and (min-width: 768px){
+    /* body{
+      /* border: 1px solid red; 
+    } */
+    .grid{
+      /* border: 1px solid purple; */
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-column-gap:25px;
+    }
+  }
+  @media screen and (min-width: 1024px){
+    .grid{
+      /* border: 1px solid purple; */
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-column-gap:25px;
+    }
+    .header-total{
+    border-bottom: none;
+    }
+    .header-grid{
+      display: grid; 
+      grid-template-columns: 1fr 200px;
+    }
+    }
+  
+    /* DARK MODE */
+  .is-dark-mode{
+    --cardGray: #252b43;
+    --gray:#8088ad;
+    --lightGray:#1d2029;
+    --baseBack:#1d2029;
+    --baseColor: white;
+    --cardTitle:#8088ad;
+    --swichSpinner:#282943;
+    --switch:linear-gradient(to right, #4796d2 0%, #37ce87 100%);
+  }
+  /* LIGHT MODE */
+  .is-light-mode{
+    --gray: #5f616d;
+    --cardGray: #f0f3fa;
+    --lightGray:#f8f9fe;
+    --baseBack:white;
+    --baseColor: #1d2029;
+    --cardTitle:#6f717e;
+    --switchSpinner: white;
+    --switch: #5f616d;
+  }
+
+  @media (prefers-color-scheme: dark){
+  :root{
+    --cardGray: #252b43;
+    --gray:#8088ad;
+    --lightGray:#1d2029;
+    --baseBack:#1d2029;
+    --baseColor: white;
+    --cardTitle:#8088ad;
+    --swichSpinner:#282943;
+    --switch:linear-gradient(to right, #4796d2 0%, #37ce87 100%);
+  }
+}
